@@ -1,5 +1,5 @@
 var fs = require("fs")
-  , data = fs.existsSync("./TODO.json") ? require("./TODO.json") : []
+  , data = fs.existsSync("./TODO.json") ? JSON.parse(fs.readFileSync("./TODO.json", "utf-8") : []
   , colors = require("./utils/colors")
   , pad = function(integer){
       var string = String(integer)
