@@ -1,0 +1,25 @@
+{
+  "name": "bloody-todo",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/**.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bloodyowl/todo.git"
+  },
+  "author": "bloodyowl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bloodyowl/todo/issues"
+  },
+  "homepage": "https://github.com/bloodyowl/todo",
+  "devDependencies": {
+    "tape": "^2.10.2"
+  },
+  "bin": {
+    "td" : "./bin.js"
+  }
+}
