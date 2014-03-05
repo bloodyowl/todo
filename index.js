@@ -1,5 +1,5 @@
 var fs = require("fs")
-  , data = fs.existsSync("./data.json") ? require("./data.json") : []
+  , data = fs.existsSync("./TODO.json") ? require("./TODO.json") : []
   , colors = require("./utils/colors")
   , pad = function(integer){
       var string = String(integer)
@@ -42,6 +42,6 @@ module.exports = {
     return this.list()
   },
   close : function(){
-    fs.writeFileSync("./data.json", new Buffer(JSON.stringify(data)), "utf-8")
+    fs.writeFileSync("./TODO.json", new Buffer(JSON.stringify(data, null, 2)), "utf-8")
   }
 }

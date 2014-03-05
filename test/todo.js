@@ -16,7 +16,7 @@ tape("todo", function(test){
   test.equal(todo.clear(), "")
   test.deepEqual(todo.data, [])
   todo.close()
-  test.equal(fs.readFileSync("./data.json", "utf-8"), "[]")
+  test.equal(fs.readFileSync("./TODO.json", "utf-8"), "[]")
   test.end()
 
 })

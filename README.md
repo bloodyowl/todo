@@ -4,7 +4,7 @@
 npm install -g bloody-todo
 ```
 
-a simple cli todo list
+a simple cli todo list, saves a `TODO.json` file with the current task list.
 
 ```shell
 td add do some stuff # add `do some stuff`
