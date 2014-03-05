@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var todo = require("./")
   , command = process.argv[2]
   , args = process.argv.slice(3).join(" ")
