@@ -1,12 +1,12 @@
 # 📋 todo
 
-```shell
+```bash
 npm install -g bloody-todo
 ```
 
 a simple cli todo list, saves a `TODO.json` file with the current task list.
 
-```shell
+```bash
 td add do some stuff # add `do some stuff`
 # + do some stuff
 td list
