@@ -1,5 +1,7 @@
 # 📋 todo
 
+[![Build Status](https://travis-ci.org/bloodyowl/todo.svg)](https://travis-ci.org/bloodyowl/todo)
+
 ```bash
 npm install -g bloody-todo
 ```
@@ -26,5 +28,5 @@ td list
 # 1  ✗ foo
 td clear
 td list
-# 
+#
 ```
