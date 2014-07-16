@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 var todo = require("./")
-  , command = process.argv[2]
-  , args = process.argv.slice(3).join(" ")
+var command = process.argv[2]
+var args = process.argv.slice(3).join(" ")
 
 switch(command) {
   case "l":

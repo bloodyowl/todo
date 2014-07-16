@@ -1,11 +1,11 @@
 var fs = require("fs")
-  , data = fs.existsSync("./TODO.json") ? JSON.parse(fs.readFileSync("./TODO.json", "utf-8")) : []
-  , colors = require("./utils/colors")
-  , figures = require("./utils/figures")
-  , pad = function(integer){
-      var string = String(integer)
-      return string + Array(4 - string.length).join(" ")
-    }
+var data = fs.existsSync("./TODO.json") ? JSON.parse(fs.readFileSync("./TODO.json", "utf-8")) : []
+var colors = require("./utils/colors")
+var figures = require("./utils/figures")
+var pad = function(integer){
+  var string = String(integer)
+  return string + Array(4 - string.length).join(" ")
+}
 
 module.exports = {
   data : data,
