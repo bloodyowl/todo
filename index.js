@@ -1,6 +1,7 @@
 var fs = require("fs")
   , data = fs.existsSync("./TODO.json") ? JSON.parse(fs.readFileSync("./TODO.json", "utf-8")) : []
   , colors = require("./utils/colors")
+  , figures = require("./utils/figures")
   , pad = function(integer){
       var string = String(integer)
       return string + Array(4 - string.length).join(" ")
@@ -14,26 +15,26 @@ module.exports = {
       checked : false,
       canceled : false
     })
-    return colors.yellow("+ " + task)
+    return colors.yellow(figures.plus + " " + task)
   },
   list : function(){
     return data.map(function(item, index){
       return pad(index) +
       (item.canceled ?
-        colors.blue("✗ " + item.task) :
+        colors.blue(figures.cross + " " + item.task) :
         (item.checked ?
-          colors.green("✔︎ " + item.task) :
+          colors.green(figures.tick + " " + item.task) :
           colors.yellow("  " + item.task))
         )
     }).join("\n")
   },
   check : function(task){
     data[task].checked = true
-    return colors.green("✔︎ " + data[task].task)
+    return colors.green(figures.tick + " " + data[task].task)
   },
   remove : function(task){
     data[task].canceled = true
-    return colors.blue("✗ " + data[task].task)
+    return colors.blue(figures.cross + " " + data[task].task)
   },
   clear : function(){
     data = this.data = data.filter(function(item){
